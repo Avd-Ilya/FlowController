@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol TutorialControllerDelegate: class {
+    func tutorialControllerDidFinish(_ controller: TutorialController)
+}

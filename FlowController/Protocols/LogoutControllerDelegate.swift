@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol LogoutControllerDelegate: class {
+    func logoutControllerDidFinish(_ Controller: LogoutController)
+}

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol TutorialFlowControllerDelegate {
-    
+protocol TutorialFlowControllerDelegate: class {
+    func tutorialFlowControllerDidFinish(_ flowController: TutorialFlowController)
 }

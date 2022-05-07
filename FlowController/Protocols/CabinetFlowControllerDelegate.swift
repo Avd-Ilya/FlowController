@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol CabinetFlowControllerDelegate: class {
+    func cabinetFlowControllerDidFinish(_ flowController: CabinetFlowController)
+}

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol AuthorizationControllerDelegate: class {
+    func authorizationControllerDidFinish(_ controller: AuthorizationController)
+}

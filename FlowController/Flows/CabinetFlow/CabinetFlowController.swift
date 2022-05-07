@@ -9,21 +9,38 @@ import UIKit
 
 class CabinetFlowController: UIViewController {
 
+    private var embeddedTabBarController: UITabBarController!
+    weak var delegate: CabinetFlowControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        print("CabinetFlowController")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        
+        embeddedTabBarController = UITabBarController()
+        add(childController: embeddedTabBarController)
     }
-    */
+    
+    func start() {
+        let loginController = LoginController()
+        let logoutController = LogoutController()
 
+        logoutController.delegate = self
+        loginController.delegate = self
+        
+        loginController.tabBarItem = loginController.myTabBarItem
+        logoutController.tabBarItem = logoutController.myTabBarItem
+
+        let controllerArray = [loginController, logoutController]
+        embeddedTabBarController.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
+
+

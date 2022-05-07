@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+extension AppFlowController: CabinetFlowControllerDelegate {
+    func cabinetFlowControllerDidFinish(_ flowController: CabinetFlowController) {
+        remove(childController: flowController)
+        start()
+    }
+}
+
+extension AppFlowController: TutorialFlowControllerDelegate {
+    func tutorialFlowControllerDidFinish(_ flowController: TutorialFlowController) {
+        remove(childController: flowController)
+        startCabinet()
+    }
+}

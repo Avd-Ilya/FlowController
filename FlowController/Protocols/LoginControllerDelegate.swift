@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol LoginControllerDelegate: class {
+    func loginControllerDidFinish(_ controller: LoginController)
+}
