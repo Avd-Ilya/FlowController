@@ -31,16 +31,28 @@ final class AppFlowController: UIViewController {
     
     func startTutorial() {
         let tutorialFlowController = TutorialFlowController()
-        tutorialFlowController.delegate = self
+
         add(childController: tutorialFlowController)
         tutorialFlowController.start()
+        tutorialFlowController.didFinish = { [weak self] vc in
+            guard let self = self else { return }
+            
+            self.remove(childController: vc)
+            self.startCabinet()
+        }
     }
     
     func startCabinet() {
         let cabinetFlowController = CabinetFlowController()
-        cabinetFlowController.delegate = self
         add(childController: cabinetFlowController)
         cabinetFlowController.start()
+        
+        cabinetFlowController.didFinish = { [weak self] vc in
+            guard let self = self else { return }
+            
+            self.remove(childController: vc)
+            self.start()
+        }
     }
 }
 

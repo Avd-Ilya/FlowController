@@ -7,10 +7,9 @@
 
 import UIKit
 
-class CabinetFlowController: UIViewController {
+class CabinetFlowController: UITabBarController {
 
-    private var embeddedTabBarController: UITabBarController!
-    weak var delegate: CabinetFlowControllerDelegate?
+    var didFinish: ((UIViewController) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,23 +18,22 @@ class CabinetFlowController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        
-        embeddedTabBarController = UITabBarController()
-        add(childController: embeddedTabBarController)
     }
     
     func start() {
-        let loginController = LoginController()
-        let logoutController = LogoutController()
+        let loginFlowController = LoginFlowController()
+        let logoutFlowController = LogoutFlowController()
 
-        logoutController.delegate = self
-        loginController.delegate = self
+        loginFlowController.start()
+        logoutFlowController.start()
         
-        loginController.tabBarItem = loginController.myTabBarItem
-        logoutController.tabBarItem = logoutController.myTabBarItem
-
-        let controllerArray = [loginController, logoutController]
-        embeddedTabBarController.viewControllers = controllerArray.map{ UINavigationController.init(rootViewController: $0)}
+        logoutFlowController.didFinish = {[weak self] in
+            guard let self = self else { return }
+            
+            self.didFinish?(self)
+        }
+    
+        self.viewControllers = [loginFlowController, logoutFlowController]
     }
     
     required init?(coder: NSCoder) {

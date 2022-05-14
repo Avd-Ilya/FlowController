@@ -7,11 +7,9 @@
 
 import UIKit
 
-class TutorialFlowController: UIViewController {
+class TutorialFlowController: UINavigationController {
 
-    private var embeddedNavigationController: UINavigationController!
-    weak var delegate: TutorialFlowControllerDelegate?
-
+    var didFinish: ((UIViewController) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +20,17 @@ class TutorialFlowController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        
-        embeddedNavigationController = UINavigationController()
-        add(childController: embeddedNavigationController)
     }
     
     func start() {
         let tutorialController = TutorialController()
-        tutorialController.delegate = self
-        embeddedNavigationController.viewControllers = [tutorialController]
+        
+        pushViewController(tutorialController, animated: true)
+        tutorialController.didFinish = { [weak self] in
+            guard let self = self else { return }
+        
+            self.didFinish?(self)
+        }
     }
     
     required init?(coder: NSCoder) {

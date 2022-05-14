@@ -9,16 +9,8 @@ import UIKit
 
 class LoginController: UIViewController {
     
-    weak var delegate: LoginControllerDelegate?
+    var didFinish: (() -> Void)?
 
-    
-    let myTabBarItem: UITabBarItem = {
-        let tabBarItem = UITabBarItem()
-        tabBarItem.title = "Login"
-        tabBarItem.image = UIImage(systemName: "person.crop.circle.fill.badge.plus")
-        return tabBarItem
-    }()
-    
     let loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -50,11 +42,15 @@ class LoginController: UIViewController {
     
     @objc func buttonPressed() {
         let authorizationController = AuthorizationController()
-        authorizationController.delegate = self
-        authorizationController.delegate = self
-        authorizationController.hidesBottomBarWhenPushed = true
-        navigationController?.modalPresentationStyle = .pageSheet
-        navigationController?.present(authorizationController, animated: true, completion: nil)
+
+        authorizationController.modalPresentationStyle = .pageSheet
+        authorizationController.didFinish = { [weak self] in
+            guard let self = self else { return }
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        present(authorizationController, animated: true, completion: nil)
     }
 }
 

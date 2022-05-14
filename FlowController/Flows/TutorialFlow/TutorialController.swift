@@ -9,8 +9,7 @@ import UIKit
 
 class TutorialController: UIViewController {
 
-    weak var delegate: TutorialControllerDelegate?
-
+    var didFinish: (() -> Void)?
     
     let goToCabinetButton: UIButton = {
         let button = UIButton()
@@ -40,6 +39,6 @@ class TutorialController: UIViewController {
     }
 
     @objc func buttonPressed() {
-        delegate?.tutorialControllerDidFinish(self)
+        didFinish?()
     }
 }

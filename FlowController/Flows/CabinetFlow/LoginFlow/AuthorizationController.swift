@@ -8,8 +8,8 @@
 import UIKit
 
 class AuthorizationController: UIViewController {
-
-    weak var delegate: AuthorizationControllerDelegate?
+    
+    var didFinish: (() -> Void)?
     
     let AuthorizationButton: UIButton = {
         let button = UIButton()
@@ -39,7 +39,7 @@ class AuthorizationController: UIViewController {
     
     @objc func buttonPressed() {
         UserDefaults.standard.setValue(true, forKey: "isAuthorized")
-        delegate?.authorizationControllerDidFinish(self)
+        didFinish?()
     }
 
 }

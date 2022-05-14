@@ -9,16 +9,8 @@ import UIKit
 
 class LogoutController: UIViewController {
     
-    weak var delegate: LogoutControllerDelegate?
+    var didFinish: (() -> Void)?
 
-    
-    let myTabBarItem: UITabBarItem = {
-        let tabBarItem = UITabBarItem()
-        tabBarItem.title = "Logout"
-        tabBarItem.image = UIImage(systemName: "person.crop.circle.fill.badge.minus")
-        return tabBarItem
-    }()
-    
     let logoutButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -48,6 +40,6 @@ class LogoutController: UIViewController {
     
     @objc func buttonPressed() {
         UserDefaults.standard.setValue(false, forKey: "isAuthorized")
-        delegate?.logoutControllerDidFinish(self)
+        didFinish?()
     }
 }
