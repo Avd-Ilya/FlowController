@@ -6,21 +6,23 @@
 //
 
 import UIKit
+import CompanyLoginKit
+import CompanyLogoutKit
 
-class CabinetFlowController: UITabBarController {
+public class CabinetFlowController: UITabBarController {
 
-    var didFinish: ((UIViewController) -> Void)?
+    public var didFinish: ((UIViewController) -> Void)?
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("CabinetFlowController")
     }
     
-    init() {
+    public init() {
         super.init(nibName: nil, bundle: nil)
     }
     
-    func start() {
+    public func start() {
         let loginController = LoginController()
         let logoutController = LogoutController()
         let loginFlowController = LoginFlowController(rootViewController: loginController)

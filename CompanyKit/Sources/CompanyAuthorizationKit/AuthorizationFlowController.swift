@@ -7,17 +7,17 @@
 
 import UIKit
 
-class AuthorizationFlowController: UINavigationController {
-    var didFinish: (() -> Void)?
+public class AuthorizationFlowController: UINavigationController {
+    public var didFinish: (() -> Void)?
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("AuthorizationFlowController")
         
         view.backgroundColor = #colorLiteral(red: 0.09019608051, green: 0, blue: 0.3019607961, alpha: 1)
     }
     
-    override init(rootViewController: UIViewController) {
+    public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
     
@@ -25,7 +25,7 @@ class AuthorizationFlowController: UINavigationController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func start() {
+    public func start() {
         guard let authorizationController = self.viewControllers.first as? AuthorizationController else { return }
         
         authorizationController.didFinish = { [weak self] in

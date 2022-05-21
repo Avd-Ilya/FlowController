@@ -7,9 +7,9 @@
 
 import UIKit
 
-class AuthorizationController: UIViewController {
+public class AuthorizationController: UIViewController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
     
     let AuthorizationButton: UIButton = {
         let button = UIButton()
@@ -23,7 +23,7 @@ class AuthorizationController: UIViewController {
         return button
     }()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("AuthorizationController")
         

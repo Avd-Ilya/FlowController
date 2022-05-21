@@ -7,23 +7,23 @@
 
 import UIKit
 
-class TutorialFlowController: UINavigationController {
+public class TutorialFlowController: UINavigationController {
     
     //var vc: UIViewController
-    var didFinish: ((UIViewController) -> Void)?
+    public var didFinish: ((UIViewController) -> Void)?
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("TutorialFlowController")
         
         view.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
     }
         
-    override init(rootViewController: UIViewController) {
+    public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
     
-    func start() {
+    public func start() {
         guard let tutorialController = self.viewControllers.first as? TutorialController else { return }
 
         tutorialController.didFinish = { [weak self] in

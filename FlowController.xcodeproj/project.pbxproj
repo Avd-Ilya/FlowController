@@ -3,45 +3,29 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0956055C2837BE03004A9F84 /* AuthorizationFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956055B2837BE03004A9F84 /* AuthorizationFlowController.swift */; };
-		096C747C2825888D00229FF5 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096C747B2825888D00229FF5 /* LogoutController.swift */; };
-		0986E80D28267D4B004283D7 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986E80C28267D4B004283D7 /* AuthorizationController.swift */; };
 		09ACF10A282548B000B76E3E /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACF109282548B000B76E3E /* AppFlowController.swift */; };
-		09ACF10D28254B2300B76E3E /* TutorialFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACF10C28254B2300B76E3E /* TutorialFlowController.swift */; };
-		09ACF11228254B6C00B76E3E /* CabinetFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACF11128254B6C00B76E3E /* CabinetFlowController.swift */; };
 		09ACF11B28254CD800B76E3E /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACF11A28254CD800B76E3E /* UIViewControllerExtensions.swift */; };
-		09ACF11F28254E1A00B76E3E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACF11E28254E1A00B76E3E /* LoginController.swift */; };
-		09ACF12228254E3200B76E3E /* TutorialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACF12128254E3200B76E3E /* TutorialController.swift */; };
-		09BD28AB282FC32400490030 /* LoginFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD28AA282FC32400490030 /* LoginFlowController.swift */; };
-		09BD28AF282FC33500490030 /* LogoutFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09BD28AE282FC33500490030 /* LogoutFlowController.swift */; };
 		09CE0D3C2824267900DB53E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE0D3B2824267900DB53E9 /* AppDelegate.swift */; };
 		09CE0D402824267900DB53E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CE0D3F2824267900DB53E9 /* ViewController.swift */; };
 		09CE0D452824267B00DB53E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CE0D442824267B00DB53E9 /* Assets.xcassets */; };
 		09CE0D482824267B00DB53E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CE0D462824267B00DB53E9 /* LaunchScreen.storyboard */; };
+		09D49C56283909DD00817A5E /* CompanyKit in Frameworks */ = {isa = PBXBuildFile; productRef = 09D49C55283909DD00817A5E /* CompanyKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0956055B2837BE03004A9F84 /* AuthorizationFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationFlowController.swift; sourceTree = "<group>"; };
-		096C747B2825888D00229FF5 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
-		0986E80C28267D4B004283D7 /* AuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		09ACF109282548B000B76E3E /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
-		09ACF10C28254B2300B76E3E /* TutorialFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialFlowController.swift; sourceTree = "<group>"; };
-		09ACF11128254B6C00B76E3E /* CabinetFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetFlowController.swift; sourceTree = "<group>"; };
 		09ACF11A28254CD800B76E3E /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
-		09ACF11E28254E1A00B76E3E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		09ACF12128254E3200B76E3E /* TutorialController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialController.swift; sourceTree = "<group>"; };
-		09BD28AA282FC32400490030 /* LoginFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowController.swift; sourceTree = "<group>"; };
-		09BD28AE282FC33500490030 /* LogoutFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutFlowController.swift; sourceTree = "<group>"; };
 		09CE0D382824267900DB53E9 /* FlowController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CE0D3B2824267900DB53E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09CE0D3F2824267900DB53E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		09CE0D442824267B00DB53E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09CE0D472824267B00DB53E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09CE0D492824267B00DB53E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09D49C52283909D000817A5E /* CompanyKit */ = {isa = PBXFileReference; lastKnownFileType = text; path = CompanyKit; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D49C56283909DD00817A5E /* CompanyKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,34 +60,6 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		09ACF11628254C4A00B76E3E /* Flows */ = {
-			isa = PBXGroup;
-			children = (
-				09ACF11828254C7D00B76E3E /* CabinetFlow */,
-				09ACF11728254C5800B76E3E /* TutorialFlow */,
-			);
-			path = Flows;
-			sourceTree = "<group>";
-		};
-		09ACF11728254C5800B76E3E /* TutorialFlow */ = {
-			isa = PBXGroup;
-			children = (
-				09ACF10C28254B2300B76E3E /* TutorialFlowController.swift */,
-				09ACF12128254E3200B76E3E /* TutorialController.swift */,
-			);
-			path = TutorialFlow;
-			sourceTree = "<group>";
-		};
-		09ACF11828254C7D00B76E3E /* CabinetFlow */ = {
-			isa = PBXGroup;
-			children = (
-				09ACF11128254B6C00B76E3E /* CabinetFlowController.swift */,
-				09BD28B2282FC35D00490030 /* LoginFlow */,
-				09BD28B1282FC35300490030 /* LogoutFlow */,
-			);
-			path = CabinetFlow;
-			sourceTree = "<group>";
-		};
 		09ACF11928254CA600B76E3E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,38 +68,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		09ACF1272825602D00B76E3E /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		09BD28B1282FC35300490030 /* LogoutFlow */ = {
-			isa = PBXGroup;
-			children = (
-				09BD28AE282FC33500490030 /* LogoutFlowController.swift */,
-				096C747B2825888D00229FF5 /* LogoutController.swift */,
-			);
-			path = LogoutFlow;
-			sourceTree = "<group>";
-		};
-		09BD28B2282FC35D00490030 /* LoginFlow */ = {
-			isa = PBXGroup;
-			children = (
-				09BD28AA282FC32400490030 /* LoginFlowController.swift */,
-				09ACF11E28254E1A00B76E3E /* LoginController.swift */,
-				0956055B2837BE03004A9F84 /* AuthorizationFlowController.swift */,
-				0986E80C28267D4B004283D7 /* AuthorizationController.swift */,
-			);
-			path = LoginFlow;
-			sourceTree = "<group>";
-		};
 		09CE0D2F2824267900DB53E9 = {
 			isa = PBXGroup;
 			children = (
 				09CE0D3A2824267900DB53E9 /* FlowController */,
 				09CE0D392824267900DB53E9 /* Products */,
+				09D49C54283909DD00817A5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,13 +88,19 @@
 		09CE0D3A2824267900DB53E9 /* FlowController */ = {
 			isa = PBXGroup;
 			children = (
-				09ACF1272825602D00B76E3E /* Protocols */,
+				09D49C52283909D000817A5E /* CompanyKit */,
 				09ACF11928254CA600B76E3E /* Extensions */,
 				09ACF11528254BA400B76E3E /* Application */,
-				09ACF11628254C4A00B76E3E /* Flows */,
 				09ACF11428254B9A00B76E3E /* Resources */,
 			);
 			path = FlowController;
+			sourceTree = "<group>";
+		};
+		09D49C54283909DD00817A5E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +119,9 @@
 			dependencies = (
 			);
 			name = FlowController;
+			packageProductDependencies = (
+				09D49C55283909DD00817A5E /* CompanyKit */,
+			);
 			productName = FlowController;
 			productReference = 09CE0D382824267900DB53E9 /* FlowController.app */;
 			productType = "com.apple.product-type.application";
@@ -235,19 +175,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09ACF11228254B6C00B76E3E /* CabinetFlowController.swift in Sources */,
 				09CE0D402824267900DB53E9 /* ViewController.swift in Sources */,
-				09BD28AB282FC32400490030 /* LoginFlowController.swift in Sources */,
-				0986E80D28267D4B004283D7 /* AuthorizationController.swift in Sources */,
-				0956055C2837BE03004A9F84 /* AuthorizationFlowController.swift in Sources */,
-				09BD28AF282FC33500490030 /* LogoutFlowController.swift in Sources */,
 				09ACF11B28254CD800B76E3E /* UIViewControllerExtensions.swift in Sources */,
-				096C747C2825888D00229FF5 /* LogoutController.swift in Sources */,
 				09CE0D3C2824267900DB53E9 /* AppDelegate.swift in Sources */,
-				09ACF11F28254E1A00B76E3E /* LoginController.swift in Sources */,
-				09ACF10D28254B2300B76E3E /* TutorialFlowController.swift in Sources */,
 				09ACF10A282548B000B76E3E /* AppFlowController.swift in Sources */,
-				09ACF12228254E3200B76E3E /* TutorialController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +370,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09D49C55283909DD00817A5E /* CompanyKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CompanyKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09CE0D302824267900DB53E9 /* Project object */;
 }

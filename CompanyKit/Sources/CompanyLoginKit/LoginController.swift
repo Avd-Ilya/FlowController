@@ -7,9 +7,9 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+public class LoginController: UIViewController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
 
     let loginButton: UIButton = {
         let button = UIButton()
@@ -24,7 +24,7 @@ class LoginController: UIViewController {
     }()
 
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("LoginController")
         

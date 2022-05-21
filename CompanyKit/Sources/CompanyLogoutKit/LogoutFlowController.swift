@@ -7,9 +7,9 @@
 
 import UIKit
 
-class LogoutFlowController: UINavigationController {
+public class LogoutFlowController: UINavigationController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
     
     let myTabBarItem: UITabBarItem = {
         let tabBarItem = UITabBarItem()
@@ -18,18 +18,18 @@ class LogoutFlowController: UINavigationController {
         return tabBarItem
     }()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("LogoutFlowController")
         
         view.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
     }
     
-    override init(rootViewController: UIViewController) {
+    public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
     
-    func start() {
+    public func start() {
         self.tabBarItem = myTabBarItem
         
         guard let logoutController = self.viewControllers.first as? LogoutController else { return }

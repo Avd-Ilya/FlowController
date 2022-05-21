@@ -7,9 +7,9 @@
 
 import UIKit
 
-class TutorialController: UIViewController {
+public class TutorialController: UIViewController {
 
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
     
     let goToCabinetButton: UIButton = {
         let button = UIButton()
@@ -23,7 +23,7 @@ class TutorialController: UIViewController {
         return button
     }()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("TutorialController")
 

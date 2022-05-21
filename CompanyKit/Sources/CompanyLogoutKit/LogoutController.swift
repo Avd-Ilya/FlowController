@@ -7,9 +7,9 @@
 
 import UIKit
 
-class LogoutController: UIViewController {
+public class LogoutController: UIViewController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
 
     let logoutButton: UIButton = {
         let button = UIButton()
@@ -23,7 +23,7 @@ class LogoutController: UIViewController {
         return button
     }()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("LogoutController")
 

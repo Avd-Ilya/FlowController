@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import CompanyAuthorizationKit
 
-class LoginFlowController: UINavigationController {
+public class LoginFlowController: UINavigationController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
     
     let myTabBarItem: UITabBarItem = {
         let tabBarItem = UITabBarItem()
@@ -18,18 +19,18 @@ class LoginFlowController: UINavigationController {
         return tabBarItem
     }()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         print("LoginFlowController")
         
         view.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
     }
     
-    override init(rootViewController: UIViewController) {
+    public override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
     }
     
-    func start() {
+    public func start() {
         self.tabBarItem = myTabBarItem
         
         guard let loginController = self.viewControllers.first as? LoginController else { return }
