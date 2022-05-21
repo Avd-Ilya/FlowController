@@ -8,7 +8,8 @@
 import UIKit
 
 class TutorialFlowController: UINavigationController {
-
+    
+    //var vc: UIViewController
     var didFinish: ((UIViewController) -> Void)?
     
     override func viewDidLoad() {
@@ -17,18 +18,17 @@ class TutorialFlowController: UINavigationController {
         
         view.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
     }
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
+        
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
     }
     
     func start() {
-        let tutorialController = TutorialController()
-        
-        pushViewController(tutorialController, animated: true)
+        guard let tutorialController = self.viewControllers.first as? TutorialController else { return }
+
         tutorialController.didFinish = { [weak self] in
             guard let self = self else { return }
-        
+
             self.didFinish?(self)
         }
     }

@@ -40,5 +40,6 @@ class TutorialController: UIViewController {
 
     @objc func buttonPressed() {
         didFinish?()
+        print("btn pressed")
     }
 }

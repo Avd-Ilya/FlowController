@@ -25,20 +25,36 @@ class LoginFlowController: UINavigationController {
         view.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
     }
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
     }
     
     func start() {
         self.tabBarItem = myTabBarItem
-        let loginController = LoginController()
         
-        self.pushViewController(loginController, animated: true)
+        guard let loginController = self.viewControllers.first as? LoginController else { return }
+        
         loginController.didFinish = { [weak self] in
             guard let self = self else { return }
             
+            self.startAuthorization()
+        }
+    }
+    
+    func startAuthorization() {
+        let authorizationController = AuthorizationController()
+        let authorizationFlowController = AuthorizationFlowController(rootViewController: authorizationController)
+        
+        authorizationFlowController.modalPresentationStyle = .pageSheet
+        authorizationController.didFinish = { [weak self] in
+            guard let self = self else { return }
+            
+            self.dismiss(animated: true, completion: nil)
             self.didFinish?()
         }
+        
+        present(authorizationFlowController, animated: true, completion: nil)
+        
     }
     
     required init?(coder: NSCoder) {

@@ -21,8 +21,10 @@ class CabinetFlowController: UITabBarController {
     }
     
     func start() {
-        let loginFlowController = LoginFlowController()
-        let logoutFlowController = LogoutFlowController()
+        let loginController = LoginController()
+        let logoutController = LogoutController()
+        let loginFlowController = LoginFlowController(rootViewController: loginController)
+        let logoutFlowController = LogoutFlowController(rootViewController: logoutController)
 
         loginFlowController.start()
         logoutFlowController.start()

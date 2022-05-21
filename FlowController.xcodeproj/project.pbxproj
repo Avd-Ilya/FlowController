@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0956055C2837BE03004A9F84 /* AuthorizationFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0956055B2837BE03004A9F84 /* AuthorizationFlowController.swift */; };
 		096C747C2825888D00229FF5 /* LogoutController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096C747B2825888D00229FF5 /* LogoutController.swift */; };
 		0986E80D28267D4B004283D7 /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0986E80C28267D4B004283D7 /* AuthorizationController.swift */; };
 		09ACF10A282548B000B76E3E /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ACF109282548B000B76E3E /* AppFlowController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0956055B2837BE03004A9F84 /* AuthorizationFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationFlowController.swift; sourceTree = "<group>"; };
 		096C747B2825888D00229FF5 /* LogoutController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutController.swift; sourceTree = "<group>"; };
 		0986E80C28267D4B004283D7 /* AuthorizationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
 		09ACF109282548B000B76E3E /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				09BD28AA282FC32400490030 /* LoginFlowController.swift */,
 				09ACF11E28254E1A00B76E3E /* LoginController.swift */,
+				0956055B2837BE03004A9F84 /* AuthorizationFlowController.swift */,
 				0986E80C28267D4B004283D7 /* AuthorizationController.swift */,
 			);
 			path = LoginFlow;
@@ -236,6 +239,7 @@
 				09CE0D402824267900DB53E9 /* ViewController.swift in Sources */,
 				09BD28AB282FC32400490030 /* LoginFlowController.swift in Sources */,
 				0986E80D28267D4B004283D7 /* AuthorizationController.swift in Sources */,
+				0956055C2837BE03004A9F84 /* AuthorizationFlowController.swift in Sources */,
 				09BD28AF282FC33500490030 /* LogoutFlowController.swift in Sources */,
 				09ACF11B28254CD800B76E3E /* UIViewControllerExtensions.swift in Sources */,
 				096C747C2825888D00229FF5 /* LogoutController.swift in Sources */,

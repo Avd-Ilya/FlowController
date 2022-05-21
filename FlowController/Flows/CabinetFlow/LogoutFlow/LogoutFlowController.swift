@@ -25,15 +25,15 @@ class LogoutFlowController: UINavigationController {
         view.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
     }
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    override init(rootViewController: UIViewController) {
+        super.init(rootViewController: rootViewController)
     }
     
     func start() {
         self.tabBarItem = myTabBarItem
-        let logoutController = LogoutController()
         
-        pushViewController(logoutController, animated: true)
+        guard let logoutController = self.viewControllers.first as? LogoutController else { return }
+
         logoutController.didFinish = { [weak self] in
             guard let self = self else { return }
             

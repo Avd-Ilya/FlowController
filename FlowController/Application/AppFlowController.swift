@@ -30,10 +30,12 @@ final class AppFlowController: UIViewController {
     }
     
     func startTutorial() {
-        let tutorialFlowController = TutorialFlowController()
+        let tutorialController = TutorialController()
+        let tutorialFlowController = TutorialFlowController(rootViewController: tutorialController)
 
         add(childController: tutorialFlowController)
         tutorialFlowController.start()
+        
         tutorialFlowController.didFinish = { [weak self] vc in
             guard let self = self else { return }
             
@@ -44,6 +46,7 @@ final class AppFlowController: UIViewController {
     
     func startCabinet() {
         let cabinetFlowController = CabinetFlowController()
+        
         add(childController: cabinetFlowController)
         cabinetFlowController.start()
         

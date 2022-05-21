@@ -41,16 +41,7 @@ class LoginController: UIViewController {
     }
     
     @objc func buttonPressed() {
-        let authorizationController = AuthorizationController()
-
-        authorizationController.modalPresentationStyle = .pageSheet
-        authorizationController.didFinish = { [weak self] in
-            guard let self = self else { return }
-            
-            self.dismiss(animated: true, completion: nil)
-        }
-        
-        present(authorizationController, animated: true, completion: nil)
+        didFinish?()
     }
 }
 
